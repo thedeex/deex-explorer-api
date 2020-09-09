@@ -1,0 +1,10 @@
+swagger: '2.0'
+info:
+  title: DeEx Explorer API
+  description: Exposes DeEx calls needed to explore the blockchain
+  version: '2.0.0'
+schemes:
+  - http
+  - https
+produces:
+  - application/json

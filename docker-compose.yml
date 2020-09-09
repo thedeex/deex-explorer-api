@@ -1,0 +1,28 @@
+version: '3'
+
+networks:
+  private:
+    internal: true
+  internet:
+    internal: false
+
+volumes:
+  db-data:
+
+services:
+  web:
+    hostname: api
+    image: deex-explorer
+    build: .
+    command: uwsgi --ini docker.ini
+    depends_on:
+      - db
+    env_file:
+      - explorer_config.env
+    expose:
+      - "5000"
+    ports:
+      - "5000:5000"
+    networks:
+      - private
+      - internet

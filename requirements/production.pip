@@ -1,0 +1,13 @@
+flask
+flask-cors
+Flask-Caching
+flask_profiler
+Flask-Limiter
+connexion>=2.0.0
+connexion[swagger-ui]
+websocket-client
+simplejson
+uwsgi==2.0.15
+elasticsearch>=6.0.0,<7.0.0
+elasticsearch-dsl>=6.0.0,<7.0.0
+spec-synthase
